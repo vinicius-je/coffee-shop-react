@@ -3,7 +3,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 20px 1fr 40px;
     gap: 10px;
-    width: 680px;
+    width: 660px;
     height: 280px;   
     margin: 50px auto 0;
     background-color: white;
@@ -44,7 +44,7 @@
 }
 
 .add-cart-btn{
-    grid-area: 3 / 3 / 4 / 4;
+    grid-area: 3 / 1 / 4 / 1;
     background-color: var(--custom-green-3);
     border-radius: 3px;
     font-size: 0.875rem;
