@@ -1,23 +1,25 @@
 import img from '../../assets/milkshake_bg.jpg'
-import { Counter } from './Counter'
-import { OptionCard } from './OptionCard'
+import { Counter } from '../product-options/Counter'
+import { OptionCard } from '../product-options/OptionCard'
 import './ProductCard.css'
 
 export const ProductCard = () => {
     return(
         <div className="product-card-grid">
             <div className="product-info">
-                <h3 className="product-name">Milk Tea</h3>
-                <h3 className="product-price">$ 6.99</h3>
+                <h4 className="product-name">Milk Tea</h4>
+                <h4 className="product-price">$ 6.99</h4>
             </div>
             <div className="product-img-container">
                 <img src={img}/>
             </div>
-            <div className="options-container">
+            <div className="product-options-container">
                 <Counter/>
                 <OptionCard/>
+                <OptionCard/>
+                <OptionCard/>
             </div>
-            <button className="add-btn">buy</button>
+            <button className="add-cart-btn">Add To Card</button>
         </div>
     )
 }

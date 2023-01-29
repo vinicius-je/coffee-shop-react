@@ -4,6 +4,7 @@ export const Main = () => {
     return(
         <div className="main-container">
             <ProductCard/>
+            <ProductCard/>
         </div>
     )
 }
