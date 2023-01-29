@@ -45,7 +45,7 @@
 
 .add-cart-btn{
     grid-area: 3 / 1 / 4 / 1;
-    background-color: var(--custom-green-3);
+    background-color: var(--custom-green-1);
     border-radius: 3px;
     font-size: 0.875rem;
     font-weight: bold;

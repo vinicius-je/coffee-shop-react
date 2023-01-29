@@ -1,29 +1,22 @@
+import { useState } from 'react'
+import { InlineBold } from '../inline-info/InlineBold'
+import { Button } from './Button'
+import { OrderInfo } from './OrderInfo'
 import './style.css'
 
 export const Cart = () => {
+
     return(
         <aside className="cart-container">
-            <div className="cart-header">
-                <h3>Bill</h3>
-                <h3>Today</h3>
+            <InlineBold info1={'Bill'} info2={'Today'}/>
+            <div className="cart-info-wrapper">
+                <OrderInfo/>
+                <OrderInfo/>
+                <OrderInfo/>
             </div>
-            <div className="order-info">
-                <div className="order-info-header">
-                    <h3>Milk Tea</h3>
-                    <h3>$6.99</h3>
-                </div>
-                <p>amount</p>
-                <p>amount</p>
-                <p>amount</p>
-                <p>amount</p>
-            </div>
-            <div className="cart-total">
-                <h3>Total</h3>
-                <h3>$0.00</h3>
-            </div>
-
-            <button className="cart-btn">Pay By Card</button>
-            <button className="cart-btn">Pay By Cash</button>
+            <InlineBold info1={'Total'} info2={0.00}/>
+            <Button value={'Pay By Card'} active={true}/>
+            <Button value={'Pay By Cash'} active={false}/>
         </aside>
     )
 }
