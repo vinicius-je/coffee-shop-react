@@ -1,0 +1,44 @@
+.navbar-container{
+    max-width: 280px;
+    height: 90vh;
+    background-color: var(--custom-gray-2);
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.nav-subtitle{
+    margin-top: 20px;
+    text-align: left;
+}
+
+.option-box{
+    width: 100%;
+    height: 80px;
+    position: relative;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.option-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.black-mask{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #13131345;
+}
+
+.option-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+}
