@@ -1,9 +1,9 @@
-import img from '../../assets/milkshake_bg.jpg'
+// import img from '../../assets/milkshake_bg.jpg'
 import { Counter } from '../product-options/Counter'
 import { OptionCard } from '../product-options/OptionCard'
 import './ProductCard.css'
 
-export const ProductCard = () => {
+export const ProductCard = ({img}) => {
     return(
         <div className="product-card-grid">
             <div className="product-info">
