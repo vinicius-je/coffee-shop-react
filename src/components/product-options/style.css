@@ -9,7 +9,7 @@
     border-radius: 5px;
 }
 
-.circle{
+.circle, .counter-amount{
     width: 38px;
     height: 38px;
     border-radius: 100%;
@@ -18,14 +18,11 @@
     align-items: center;
     justify-content: center;
     font-weight: 600;
-}
-
-.circle{
     font-size: 0.875rem;
 }
 
 .circle:hover{
-    background-color: var(--custom-green-3);
+    background-color: var(--custom-green-1);
     color: white;
 }
 
@@ -33,7 +30,7 @@
     cursor: auto;
 }
 
-.btn-minus, .btn-plus{
+.counter-btn{
     font-size: 11px;
 }
 

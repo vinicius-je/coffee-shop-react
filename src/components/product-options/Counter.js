@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { FaMinus, FaPlus } from 'react-icons/fa'
+import { CricleButton } from './CircleButton';
 import './style.css'
 
 export const Counter = () => {
@@ -18,9 +19,9 @@ export const Counter = () => {
     return(
         <div className="counter-container">
             <p className="option-card-title">text</p>
-            <button className="circle btn-minus" onClick={minus}><FaMinus/></button>
-            <div className="circle counter-amount">{amount}</div>
-            <button className="circle btn-plus" onClick={plus}><FaPlus/></button>
+            <CricleButton value={<FaMinus className="counter-btn"/>} onClick={minus}/>
+            <div className="counter-amount">{amount}</div>
+            <CricleButton value={<FaPlus className="counter-btn"/>} onClick={plus}/>
         </div>
     )
 }
