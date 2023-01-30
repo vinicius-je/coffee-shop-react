@@ -3,12 +3,14 @@ import { Counter } from '../product-options/Counter'
 import { OptionCard } from '../product-options/OptionCard'
 import './ProductCard.css'
 
-export const ProductCard = ({img}) => {
+export const ProductCard = ({props}) => {
+    const {name, img, price} = props;
+
     return(
         <div className="product-card-grid">
             <div className="product-info">
-                <h4 className="product-name">Milk Tea</h4>
-                <h4 className="product-price">$ 6.99</h4>
+                <h4 className="product-name">{name}</h4>
+                <h4 className="product-price">$ {price}</h4>
             </div>
             <div className="product-img-container">
                 <img src={img}/>
