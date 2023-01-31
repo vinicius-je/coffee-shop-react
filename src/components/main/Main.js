@@ -1,16 +1,17 @@
 import { ProductCard } from "../product/ProductCard"
-import products from '../../data/products'
-import { useEffect } from "react"
+import { useContext, useEffect, useState } from "react"
+import { appContext } from "../../App";
 
 export const Main = () => {
+    const {product} = useContext(appContext);
 
     useEffect(() => {
-        console.log(products)
+        console.log(product)
     }, [])
 
     return(
         <div className="main-container">
-            {products.map((item, index) => (
+            {product.map((item, index) => (
                 <ProductCard props={item} key={index}/>
             ))}
         </div>

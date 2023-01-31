@@ -2,18 +2,38 @@ const products = [
     {
         category: "coffee",
         name: "Coffee",
-        img: "https://raw.githubusercontent.com/vinicius-je/coffee-shop-react/main/src/assets/products/coffee-1.jpg?token=GHSAT0AAAAAABTRMSVDQX5PNY4UUDW45G3UY6X3LDQ",
+        img: require('../assets/products/coffee-1.jpg'),
         price: 3.99
     },
     {
+        category: "coffee",
         name: "Coffee",
-        img: "https://raw.githubusercontent.com/vinicius-je/coffee-shop-react/main/src/assets/products/coffee-2.jpg?token=GHSAT0AAAAAABTRMSVCW3R5AUAGNU6HNVVEY6X3LTQ",
+        img: require('../assets/products/coffee-2.jpg'),
         price: 4.99
     },
     {
-        name: "Coffee",
-        img: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
+        category: "tea",
+        name: "Cold Tea",
+        img: require("../assets/products/tea-1.jpg"),
         price: 4.99
+    },
+    {
+        category: "tea",
+        name: "Cold Tea",
+        img: require("../assets/products/tea-2.jpg"),
+        price: 5.99
+    },
+    {
+        category: "milkshake",
+        name: "Milkshake",
+        img: require("../assets/products/milkshake-1.jpg"),
+        price: 8.99
+    },
+    {
+        category: "milkshake",
+        name: "Milkshake",
+        img: require("../assets/products/milkshake-2.jpg"),
+        price: 7.99
     }
 ]
 
