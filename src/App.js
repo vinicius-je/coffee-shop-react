@@ -12,10 +12,11 @@ export const appContext = createContext();
 function App() {
   const [product, setProduct] = useState(products.filter(item => item.category.includes("coffee")));
   const [currentSession, setCurrentSession] = useState("coffee");
+  const [order, setOrder] = useState();
 
   return (
       <div className="App">
-      <appContext.Provider value={{product, setProduct, currentSession, setCurrentSession}}>
+      <appContext.Provider value={{product, setProduct, currentSession, setCurrentSession, order, setOrder}}>
         <Header/>
         <Navbar/>
         <Main/>

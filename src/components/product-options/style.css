@@ -21,7 +21,7 @@
     font-size: 0.875rem;
 }
 
-.circle:hover{
+.circle-btn-active, .circle:hover{
     background-color: var(--custom-green-1);
     color: white;
 }

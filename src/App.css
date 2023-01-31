@@ -14,6 +14,7 @@ header{
 
 .main-container{
   grid-column: span 2;
+  min-height: 90vh;
 }
 
 .cart-container{
