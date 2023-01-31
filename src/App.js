@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import './App.css';
 import { Cart } from './components/cart/Cart';
 //Components
@@ -11,10 +11,11 @@ export const appContext = createContext();
 
 function App() {
   const [product, setProduct] = useState(products.filter(item => item.category.includes("coffee")));
+  const [currentSession, setCurrentSession] = useState("coffee");
 
   return (
       <div className="App">
-      <appContext.Provider value={{product, setProduct}}>
+      <appContext.Provider value={{product, setProduct, currentSession, setCurrentSession}}>
         <Header/>
         <Navbar/>
         <Main/>

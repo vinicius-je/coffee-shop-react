@@ -5,15 +5,12 @@ import { appContext } from "../../App";
 export const Main = () => {
     const {product} = useContext(appContext);
 
-    useEffect(() => {
-        console.log(product)
-    }, [])
-
     return(
         <div className="main-container">
-            {product.map((item, index) => (
+            {product.length != 0 ? product.map((item, index) => (
                 <ProductCard props={item} key={index}/>
-            ))}
+            )) : 
+            <h4 style={{marginTop: '20px'}}>No products found</h4>}
         </div>
     )
 }

@@ -4,10 +4,11 @@ import products from '../../data/products';
 import './style.css'
 
 export const NavbarButton = ({text, img}) => {
-    const {setProduct} = useContext(appContext);
+    const {setProduct, setCurrentSession} = useContext(appContext);
 
     const onClick = () => {
-        setProduct(products.filter(item => item.category.includes(text.toLowerCase())))
+        setProduct(products.filter(item => item.category.includes(text.toLowerCase())));
+        setCurrentSession(text.toLowerCase());
     }
 
     return(
