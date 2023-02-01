@@ -36,3 +36,39 @@ header{
     font-size: 1.1rem;
     color: black;
 }
+
+.hamburger-menu{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 13px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-menu div{
+    height: 3px;
+    background-color: black;
+}
+
+.bar-1{
+    width: 30px;
+}
+
+.bar-2{
+    width: 20px;
+}
+
+.bar-3{
+    width: 10px;
+}
+
+@media (max-width: 1250px){
+    .search-container{
+        min-width: 50%;
+    }
+
+    .hamburger-menu{
+        display: flex;
+    }
+}

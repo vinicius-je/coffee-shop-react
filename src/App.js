@@ -13,10 +13,12 @@ function App() {
   const [product, setProduct] = useState(products.filter(item => item.category.includes("coffee")));
   const [currentSession, setCurrentSession] = useState("coffee");
   const [order, setOrder] = useState([]);
+  const [cart, setCart] = useState(false);
 
   return (
       <div className="App">
-      <appContext.Provider value={{product, setProduct, currentSession, setCurrentSession, order, setOrder}}>
+      <appContext.Provider 
+        value={{product, setProduct, currentSession, setCurrentSession, order, setOrder, cart, setCart}}>
         <Header/>
         <Navbar/>
         <Main/>

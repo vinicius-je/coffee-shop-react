@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr
+  grid-template-columns: 1fr 2fr 1fr;
 }
 
 header{
@@ -15,8 +15,44 @@ header{
 .main-container{
   grid-column: span 2;
   min-height: 90vh;
+  padding-bottom: 50px;
 }
 
 .cart-container{
   grid-column: span 1;
+}
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--custom-gray-2); 
+  border-radius: 3px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--custom-green-1); 
+  border-radius: 10px;
+}
+
+@media (max-width: 1250px) {  
+  .main-container{
+    grid-column: span 3;
+  }
+
+  .cart-container{
+    grid-column: span 0;
+  }
+}
+
+@media (max-width: 970px) {
+  .main-container{
+    grid-column: span 4;
+  }
+
+  .navbar-container{
+    grid-column: span 4;
+  }
+
 }

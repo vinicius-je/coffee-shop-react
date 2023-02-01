@@ -1,11 +1,11 @@
 import { useContext, useEffect, useState } from 'react'
-import {FaSearch} from 'react-icons/fa'
+import {FaHamburger, FaSearch} from 'react-icons/fa'
 import { appContext } from '../../App'
 import products from '../../data/products'
 import './style.css'
 
 export const Header = () => {
-    const {product, setProduct, currentSession} = useContext(appContext);
+    const {product, setProduct, currentSession, cart, setCart} = useContext(appContext);
     const [inputValue, setInputValue] = useState("");
 
     // reset products according to current session
@@ -25,6 +25,11 @@ export const Header = () => {
             <div className="search-container">     
                 <FaSearch className="search-icon"/>
                 <input type="text" className="search-input" value={inputValue} onChange={onChange}></input>
+            </div>
+            <div className="hamburger-menu" onClick={() => setCart(!cart)}>
+                <div className="bar-1"></div>
+                <div className="bar-2"></div>
+                <div className="bar-3"></div>
             </div>
         </header>
     )
