@@ -1,5 +1,4 @@
-// import img from '../../assets/milkshake_bg.jpg'
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { appContext } from '../../App';
 import { Counter } from '../product-options/Counter'
 import { OptionCard } from '../product-options/OptionCard'
@@ -16,32 +15,29 @@ export const ProductCard = ({props}) => {
     const [ice, setIce] = useState("30%");                                                                                                                                
 
     const onClick = () => {
-        const index = order.findIndex(item => item.id == id);
-
-        if(index != -1){
+        const index = order.findIndex(item => item.id === id);
+    
+        if(index !== -1){
             // Update order by id
-            const copyOrder = order.map((item) => {
-                if(item.id == id){
+            let updateOrder = order.map((item) => {
+                if(item.id === id){
                     return {...item, amount: item.amount + amount, size, sugar, ice}
+                }else{
+                    return item
                 }
             })
-            setOrder(copyOrder);
+            setOrder(updateOrder);
         }else{
             // Add new order
             setOrder([...order, {id, name, price, amount, size, sugar, ice}]);
         }
-     
+        
         // Reset states
         setAmount(1);
         setSize("L");
         setSugar("30%");
         setIce("30%");
     }
-
-    useEffect(() => {
-        console.log(order)
-    }, [order])
-
 
     return(
         <div className="product-card-grid">

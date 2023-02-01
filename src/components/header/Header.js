@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react'
-import {FaHamburger, FaSearch} from 'react-icons/fa'
+import {FaSearch} from 'react-icons/fa'
 import { appContext } from '../../App'
 import products from '../../data/products'
 import './style.css'
@@ -8,7 +8,7 @@ export const Header = () => {
     const {product, setProduct, currentSession, cart, setCart} = useContext(appContext);
     const [inputValue, setInputValue] = useState("");
 
-    // reset products according to current session
+    // Reset products according to current session
     useEffect(() => {
         if(inputValue == "" && product.length == 0)
             setProduct(products.filter(item => item.category.includes(currentSession)));

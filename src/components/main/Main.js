@@ -1,5 +1,5 @@
 import { ProductCard } from "../product/ProductCard"
-import { useContext, useEffect, useState } from "react"
+import { useContext } from "react"
 import { appContext } from "../../App";
 
 export const Main = () => {

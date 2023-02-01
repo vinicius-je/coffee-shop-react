@@ -9,7 +9,7 @@
 }
 
 .cart-info-wrapper{
-    height: 340px;
+    height: 60%;
     overflow-y: auto;
     margin: 5px 0 10px 0;
     border-bottom: 3px solid var(--custom-green-1);

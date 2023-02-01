@@ -72,3 +72,10 @@ header{
         display: flex;
     }
 }
+
+@media (max-width: 500px){
+    .search-container{
+        width: 100px;
+    }
+}
+

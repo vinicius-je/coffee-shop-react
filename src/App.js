@@ -5,6 +5,7 @@ import { Cart } from './components/cart/Cart';
 import { Header } from './components/header/Header';
 import { Main } from './components/main/Main';
 import { Navbar } from './components/navbar/Navbar';
+//Data
 import products from './data/products'
 
 export const appContext = createContext();

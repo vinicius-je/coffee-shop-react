@@ -1,14 +1,12 @@
 import { useContext, useEffect, useState } from 'react'
-import { FaClosedCaptioning, FaCocktail, FaIoxhost, FaQuinscape, FaSignOutAlt, FaVectorSquare } from 'react-icons/fa'
 import { appContext } from '../../App'
 import { InlineBold } from '../inline-info/InlineBold'
 import { Button } from './Button'
 import { OrderInfo } from './OrderInfo'
 import './style.css'
-import { FiX } from "react-icons/fi";
 
 export const Cart = () => {
-    const {order, setOrder, cart, setCart} = useContext(appContext);
+    const {order, cart, setCart} = useContext(appContext);
 
     const [bill, setBill] = useState(0);
     const [btn, setBtn] = useState("Pay By Card");
@@ -20,7 +18,6 @@ export const Cart = () => {
     useEffect(() => {
         setBill(totalValue().toFixed(2));
     }, [order])
-
 
     return(
         <aside className={cart ? "cart-container cart-open" : "cart-container cart-close"}>

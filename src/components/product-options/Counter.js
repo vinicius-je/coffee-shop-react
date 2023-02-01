@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { FaMinus, FaPlus } from 'react-icons/fa'
 import { CricleButton } from './CircleButton';
 import './style.css'
@@ -13,7 +12,6 @@ export const Counter = ({amount, setAmount}) => {
         if(amount != 1)
             setAmount(amount - 1);
     }
-
 
     return(
         <div className="counter-container">
