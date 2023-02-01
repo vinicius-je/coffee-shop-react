@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/coffee-shop-react/static/css/main.042d23a4.css",
+    "main.js": "/coffee-shop-react/static/js/main.2f13b614.js",
+    "static/media/tea-2.jpg": "/coffee-shop-react/static/media/tea-2.a30b721ae870e122be6b.jpg",
+    "static/media/croissant_bg.jpg": "/coffee-shop-react/static/media/croissant_bg.2f5d1fb7c85e96f6a4a3.jpg",
+    "static/media/coffee-3.jpg": "/coffee-shop-react/static/media/coffee-3.e85715a677826082b4eb.jpg",
+    "static/media/croissant-1.jpg": "/coffee-shop-react/static/media/croissant-1.572d2aff3f3d3d8ca98e.jpg",
+    "static/media/coffee-1.jpg": "/coffee-shop-react/static/media/coffee-1.ed6c5f924f0175474a43.jpg",
+    "static/media/cupcakes_bg.jpg": "/coffee-shop-react/static/media/cupcakes_bg.44595a025c4491c374f3.jpg",
+    "static/media/coffee_bg.jpg": "/coffee-shop-react/static/media/coffee_bg.67b797b0140b65b20e9e.jpg",
+    "static/media/tea_bg.jpg": "/coffee-shop-react/static/media/tea_bg.96727163eddfc0994838.jpg",
+    "static/media/tea-1.jpg": "/coffee-shop-react/static/media/tea-1.8ce3253dba8fa811180d.jpg",
+    "static/media/milkshake_bg.jpg": "/coffee-shop-react/static/media/milkshake_bg.62f4e3d792f1985af770.jpg",
+    "static/media/coffee-2.jpg": "/coffee-shop-react/static/media/coffee-2.b55169288467c3ee7e6b.jpg",
+    "static/media/coffee-4.jpg": "/coffee-shop-react/static/media/coffee-4.450d1f74c723fa3c1755.jpg",
+    "static/media/croissant-2.jpg": "/coffee-shop-react/static/media/croissant-2.90c3417e9854003c015d.jpg",
+    "static/media/cupcake-2.jpg": "/coffee-shop-react/static/media/cupcake-2.f19cfad28be0891a68ee.jpg",
+    "static/media/cupcake-1.jpg": "/coffee-shop-react/static/media/cupcake-1.1a2b5acab5d78cf5697a.jpg",
+    "static/media/milkshake-2.jpg": "/coffee-shop-react/static/media/milkshake-2.1384ac13dae80eb34033.jpg",
+    "static/media/milkshake-1.jpg": "/coffee-shop-react/static/media/milkshake-1.9d1f97d589d75cc64e43.jpg",
+    "index.html": "/coffee-shop-react/index.html",
+    "main.042d23a4.css.map": "/coffee-shop-react/static/css/main.042d23a4.css.map",
+    "main.2f13b614.js.map": "/coffee-shop-react/static/js/main.2f13b614.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.042d23a4.css",
+    "static/js/main.2f13b614.js"
+  ]
+}
