@@ -2,14 +2,16 @@ import { Inline } from '../inline-info/Inline'
 import { InlineBold } from '../inline-info/InlineBold'
 import './style.css'
 
-export const OrderInfo = () => {
+export const OrderInfo = ({props}) => {
+    const {name, price, amount, size, sugar, ice} = props;
+    
     return(
         <div className="order-info-container">
-            <InlineBold info1={'Milkshake'} info2={'$6.99'}/>
-            <Inline info1={'Bill'} info2={1}/>
-            <Inline info1={'Bill'} info2={'L'}/>
-            <Inline info1={'Bill'} info2={'30%'}/>
-            <Inline info1={'Bill'} info2={'50%'}/>
+            <InlineBold info1={name} info2={`$${price}`}/>
+            <Inline info1={'Amount'} info2={amount}/>
+            <Inline info1={'Size'} info2={size}/>
+            <Inline info1={'Sugar'} info2={sugar}/>
+            <Inline info1={'Ice'} info2={ice}/>
         </div>
     )
 }

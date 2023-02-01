@@ -1,7 +1,7 @@
 import './style.css'
 
-export const Button = ({value, onClick, active}) => {
+export const Button = ({value, btn, setBtn}) => {
     return(
-        <button className={active ? "btn-active custom-btn" : "btn-not-activated custom-btn"} onClick={onClick}>{value}</button>
+        <button className={btn == value ? "btn-active custom-btn" : "custom-btn"} onClick={() => setBtn(value)}>{value}</button>
     )
 }

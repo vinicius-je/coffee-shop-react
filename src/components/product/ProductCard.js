@@ -1,5 +1,6 @@
 // import img from '../../assets/milkshake_bg.jpg'
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { appContext } from '../../App';
 import { Counter } from '../product-options/Counter'
 import { OptionCard } from '../product-options/OptionCard'
 import './ProductCard.css'
@@ -7,6 +8,7 @@ import './ProductCard.css'
 
 export const ProductCard = ({props}) => {
     const {name, img, price} = props;
+    const {order, setOrder} = useContext(appContext);
 
     const [amount, setAmount] = useState(1);
     const [size, setSize] = useState("L");
@@ -14,10 +16,10 @@ export const ProductCard = ({props}) => {
     const [ice, setIce] = useState("30%");                                                                                                                                
 
     const onClick = () => {
-        console.log({name, price, amount, size, sugar, ice})
-
+        setOrder([...order, {name, price, amount, size, sugar, ice}]);
+        // reset states
         setAmount(1);
-        setSize("30%");
+        setSize("L");
         setSugar("30%");
         setIce("30%");
     }
