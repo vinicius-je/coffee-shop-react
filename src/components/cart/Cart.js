@@ -8,7 +8,7 @@ import './style.css'
 import { FiX } from "react-icons/fi";
 
 export const Cart = () => {
-    const {order, cart, setCart} = useContext(appContext);
+    const {order, setOrder, cart, setCart} = useContext(appContext);
 
     const [bill, setBill] = useState(0);
     const [btn, setBtn] = useState("Pay By Card");
@@ -18,7 +18,7 @@ export const Cart = () => {
     }
 
     useEffect(() => {
-        setBill(totalValue());
+        setBill(totalValue().toFixed(2));
     }, [order])
 
 

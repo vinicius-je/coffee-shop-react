@@ -7,7 +7,7 @@ import './ProductCard.css'
 
 
 export const ProductCard = ({props}) => {
-    const {name, img, price} = props;
+    const {id, name, img, price} = props;
     const {order, setOrder} = useContext(appContext);
 
     const [amount, setAmount] = useState(1);
@@ -16,13 +16,31 @@ export const ProductCard = ({props}) => {
     const [ice, setIce] = useState("30%");                                                                                                                                
 
     const onClick = () => {
-        setOrder([...order, {name, price, amount, size, sugar, ice}]);
-        // reset states
+        const index = order.findIndex(item => item.id == id);
+
+        if(index != -1){
+            // Update order by id
+            const copyOrder = order.map((item) => {
+                if(item.id == id){
+                    return {...item, amount: item.amount + amount, size, sugar, ice}
+                }
+            })
+            setOrder(copyOrder);
+        }else{
+            // Add new order
+            setOrder([...order, {id, name, price, amount, size, sugar, ice}]);
+        }
+     
+        // Reset states
         setAmount(1);
         setSize("L");
         setSugar("30%");
         setIce("30%");
     }
+
+    useEffect(() => {
+        console.log(order)
+    }, [order])
 
 
     return(
@@ -42,6 +60,5 @@ export const ProductCard = ({props}) => {
             </div>
             <button className="add-cart-btn" onClick={onClick}>Add To Card</button>
         </div>
-
     )
 }
